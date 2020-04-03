@@ -6,7 +6,7 @@ function gettext() {
             })
     .then((res) => res.json())
     .then((data) => {
-    console.log(data)
+        console.log(data)
     });
 }
 gettext();
@@ -29,31 +29,28 @@ var latitude;
                     let locationflag=1;
                     $('.submit').click(function (e) {
                         e.preventDefault();
-                        if (form.event_description.value == "" ||
-                            form.event_name.value == "" ||
-                            form.ending_time_delta.value == "" ||
-                            form.location_range.value == "" ||
-                            form.broadcast_choice.value == "" ||
-                            form.otp.value == "") {
-                            message.innerHTML = 'All fields are required'
-                            ca = false;
-                        }
-                        else if(form.startevent==0) {
+                        // if (form.event_description.value == "" ||
+                        //     form.event_name.value == "" ||
+                        //     form.ending_time_delta.value == "" ||
+                        //     form.location_range.value == "" ||
+                        //     form.start_event.value == "" ||
+                        //     form.broadcast_choice.value == "" ||
+                        //     form.otp.value == "") {
+                        //     message.innerHTML = 'All fields are required'
+                        //     ca = false;
+                        // }
+                        if(form.startevent==0) {
                             locationflag=0;
                         }
                         var errcheck = 0;
-                        // var jwt = 
-                        // console.log(jwt);
-                        // console.log(localStorage.getItem('token'))
                         let formData = new FormData(form);
                         var object = {};
                         formData.forEach(function (value, key) {
-                            // console.log(value)
                             object[key] = value;
                         });
                         object["latitude"] = latitude;
                         object["longitude"] = longitude;
-        
+                        console.log(object)
                         if (ca) {
                             fetch('https://painhost99.herokuapp.com/event/set', {
                                 method: 'POST',
@@ -88,12 +85,10 @@ var latitude;
                                 .then(
                                     success => {
                                         console.log(success)
-                                        // location.href="../Admin/Createdevents.html"
-                                        // console.log(longitude)
                                         document.getElementById('message').innerHTML = 'Event created'
                                         document.getElementById('message').style.color = "green"
                                         if(locationflag==0){
-                                        location.href="../Admin/Createdevents.html"
+                                        // location.href="../Admin/Createdevents.html"
                                         }
                                         else{
                                             location.href="../Admin/admindashboard.html"

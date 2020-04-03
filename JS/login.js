@@ -44,7 +44,7 @@ $(document).ready(function () {
                             
                             }return response.json();})
                             .then(
-                        success => {
+                            success => {
                             console.log(success)
                             // console.log(success.auth_token)
                             localStorage.setItem('token',success.auth_token);
@@ -53,7 +53,9 @@ $(document).ready(function () {
                                 location.href="./Admin/admindashboard.html"
                             }
                             else if(success.admin_status == false){
-                                location.href="./view/otpscreen.html"
+                                // location.href="./view/otpscreen.html"
+                                location.href="./Admin/adminotp.html"
+
                             } 
                             }
                             ).catch(
@@ -61,11 +63,17 @@ $(document).ready(function () {
                             if(errcheck==1){
                             document.getElementById('message').innerHTML = 'User does not exist'
                             document.getElementById('message').style.color = "red"
+                            for (let elem of $("#form")) {
+                                elem.reset()
+                }
                             }
                             else if(errcheck==2){
                             document.getElementById('message').innerHTML = 'Incorrect Email/Password'
                             document.getElementById('message').style.color = "red"
                             }
+                            for (let elem of $("#form")) {
+                                elem.reset()
+                }
                             console.log(error)
                         }
                     );
