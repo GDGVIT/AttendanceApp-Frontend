@@ -1,4 +1,4 @@
- $(document).ready(function () {
+$(document).ready(function () {
     console.log(localStorage.getItem('token'))
         ca=false;
         ce=true;
@@ -28,7 +28,7 @@
             if (ca & ce) {
 
                 
-                fetch('https://painhost99.herokuapp.com/user/signup', {
+                fetch('https://painhost99.herokuapp.com/admin/signup', {
                     
                     method: 'POST',
                     crossDomain: true,
@@ -54,7 +54,7 @@
                         })
                         .then(
                     success => {
-                        document.getElementById('message').innerHTML = 'Account Created'
+                        document.getElementById('message').innerHTML = 'Admin account Created'
                         document.getElementById('message').style.color = "green"
                         console.log(success)
                         console.log(localStorage.getItem('token'))

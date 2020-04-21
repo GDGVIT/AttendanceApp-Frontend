@@ -19,59 +19,26 @@
     margin-left:66px;
     margin-top:25px;
 }
-.applogo1 > img{
-    width:9.4vh;
-    height:9.4vh;
-    margin-left:66px;
-    margin-top:25px;
-}
 .heading{
     color:#2F54EB;
     font-weight: bolder;
     font-size: 2em;
-    padding-top: 30px;
-    font-weight: bolder;
+    padding-top: 20px;
 }
 .headingparent{
-    width:98vw;
+    width:99vw;
     text-align: center;
 }
-.f1{
-    border-color:#C8C8C8;
-    border-style: solid;
-    margin-top:35px;
-    width:20vw;
-    height:5.5vh;
-    border-radius: 8px;
-    padding:5px;
-    
-}
-.email{
-    width:98.7vw;
-    text-align: center;
-}
-/* .dad{
-    
-    border-style: solid;
-    border-color: lightcoral;
-} */
-/* .accordion{
-    margin:2px auto;
-} */
 .carder{
     border-style: none;
     box-shadow: 2px 2px 4px 4px rgb(214, 213, 213,0.8);
     border-radius: 13px;
-    width:30vw;
-    margin-bottom: 40px;
-    
-    /* margin:40px; */
-    /*margin-right:40px; */
-    /* margin-top: 40px; */
-    /* margin-left:-38px; */
+    width:100%;
+    margin-top: 100px;
 }
 .carder > h2{
-    padding:30px;
+    padding-top:20px;
+    padding-left:30px;
     color:#2F54EB;
     font-weight: 800;
 }
@@ -85,31 +52,26 @@
     background-color: white;
     color:#2F54EB;
     font-weight: 900;
-    width:120px;
-    height:6vh;
-    border-radius: 10px;
+    
+    height:8vh;
+    border-radius: 13px;
     border-width: 4px;
-}
-.popup{
-    text-align: center;
 }
 .buttons{
     width: 100%;
     text-align: center;
-    padding:18px;
-    font-size: small;
+    padding-bottom: 20px;
+    margin-top:-15px;
+    /* margin-top:vh; */
+    
+  
 }
-#form > button{
-    border-style: solid;
-    border-color: #2F54EB;
-    background-color: white;
-    color:#2F54EB;
-    font-weight: 900;
-    width:120px;
-    height:6vh;
-    border-radius: 10px;
-    border-width: 4px;
-    margin-top:15px;
+.accordion{
+    width:70vw;
+    margin:auto auto;
+}
+.mess{
+    text-align: center;
 }
 .applogo1{
     background-color: #2F54EB;
@@ -125,35 +87,39 @@
     width: 12px;
     height:15px;
     margin-left: 9px;
-    margin-top: 5px;
+    margin-top: 8px;
 
 }
+.loadplace{
+    padding-left: 47vw;
+}
+.userbutton{
+    margin:40px;
+    padding-left: 20px;
+    padding-right:20px;
+    /* width:500px; */
+}
+.carder > h2{
+    font-size: 1.3em;
+}
 @media screen and (max-width: 700px){
-
     .dsclogo{
         display:none;
     }
     .applogo{
-        display:none;
+        margin-left:-40px;
     }
-    /* .applogo1{
-        border-color: lawngreen;
-        border-style:solid;
+    .heading{
+        padding-top:10px;
+    }
+    /* .f1{
+        width:60vw;
     } */
     .applogo1 > img{
         margin-left: 10px;
         margin-top:8px;
     }
-    .heading{
-        padding-top:20px;
-    }
-    .f1{
-        width:60vw;
-    }
-    .carder{
-        width:80vw;
-        height:45vh;
-        overflow: hidden;
-        margin-bottom: 20px;
+    .loadplace{
+        padding-left: 41vw;
     }
 }

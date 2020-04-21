@@ -1,4 +1,4 @@
-    var latitude;
+var latitude;
 var longitude;
 function getLocation() {
     if (navigator.geolocation) {
@@ -12,32 +12,32 @@ function showPosition(position) {
 getLocation();
 
 
-function gettext() {
-    fetch('https:/painhost99.herokuapp.com/events/ongoing' ,{
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            })
-    .then((res) => res.json())
-    .then((data) => {
-        console.log(data);
-        console.log(Object.entries(data))
-        console.log(Object.entries(data)[0][0])
-      let output = '';
-      let i;
-      let j=Object.entries(data).length
-      for(i=0;i<j;i++){
-        output += `
-            <div class="carder">
-              <h2>${Object.entries(data)[i][0]}</h2>
-              <h2>${Object.entries(data)[i][1]}</h2>
-            </div>
-`
-      };
-      document.getElementById("accordionExample").innerHTML = output;
-    });
- };
-  gettext();
+// function gettext() {
+//     fetch('https://painhost99.herokuapp.com/events/ongoing',{
+//             headers: {
+//                 'Content-Type': 'application/json'
+//             },
+//             })
+//     .then((res) => res.json())
+//     .then((data) => {
+//         // console.log(data);
+//         // console.log(Object.entries(data))
+//         // console.log(Object.entries(data)[0][0])
+//       let output = '';
+//       let i;
+//       let j=Object.entries(data).length
+//       for(i=0;i<j;i++){
+//         output += `
+//             <div class="carder">
+//               <h2>${Object.entries(data)[i][0]}</h2>
+//               <h2>${Object.entries(data)[i][1]}</h2>
+//             </div>
+// `
+//       };
+//       document.getElementById("accordionExample").innerHTML = output;
+//     });
+//  };
+//   gettext();
 
 
 
@@ -55,8 +55,8 @@ $(document).ready(function() {
         });
         socket_attendence.on('attendence_result', function(res) {
             var obj = JSON.parse(res);
-            console.log(obj)
-            console.log(obj.Status)
+            // console.log(obj)
+            // console.log(obj.Status)
             document.getElementById("messages").innerHTML=(`<div>
             <p>${obj.Reason}</p>
             </div>`)

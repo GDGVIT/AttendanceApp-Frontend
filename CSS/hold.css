@@ -23,7 +23,7 @@
     color:#2F54EB;
     font-weight: bolder;
     font-size: 2em;
-    padding-top: 30px;
+    padding-top: 20px;
 }
 .headingparent{
     width:99vw;
@@ -34,11 +34,11 @@
     box-shadow: 2px 2px 4px 4px rgb(214, 213, 213,0.8);
     border-radius: 13px;
     width:100%;
-    height:55vh;
     margin-top: 100px;
 }
 .carder > h2{
-    padding:30px;
+    padding-top:20px;
+    padding-left:30px;
     color:#2F54EB;
     font-weight: 800;
 }
@@ -60,9 +60,11 @@
 .buttons{
     width: 100%;
     text-align: center;
+    padding-bottom: 20px;
+    margin-top:-15px;
     /* margin-top:vh; */
     
-    
+  
 }
 .accordion{
     width:70vw;
@@ -71,8 +73,27 @@
 .mess{
     text-align: center;
 }
-@media screen and (max-width: 700px){
+.applogo1{
+    background-color: #2F54EB;
+    width:32px;
+    height:32px;
+    border-radius: 50%;
+    margin-left:50px;
+    margin-top:50px;
+    margin-bottom:-70px;
+    cursor: pointer;
+}
+.applogo1 > img{
+    width: 12px;
+    height:15px;
+    margin-left: 9px;
+    margin-top: 8px;
 
+}
+.loadplace{
+    padding-left: 47vw;
+}
+@media screen and (max-width: 700px){
     .dsclogo{
         display:none;
     }
@@ -80,9 +101,16 @@
         display:none;
     }
     .heading{
-        padding-top:100px;
+        padding-top:10px;
     }
     /* .f1{
         width:60vw;
     } */
+    .applogo1 > img{
+        margin-left: 10px;
+        margin-top:8px;
+    }
+    .loadplace{
+        padding-left: 41vw;
+    }
 }

@@ -31,7 +31,7 @@ $(document).ready(function () {
                 object["g-recaptcha-response"]=localStorage.getItem("captcha");
                 // console.log(JSON.stringify(object))
                 if (ca) {
-                    fetch('https://painhost99.herokuapp.com/user/login', {
+                    fetch('https://painhost99.herokuapp.com/admin/login', {
                         method: 'POST',
                         crossDomain: true,
                         headers: {
@@ -41,7 +41,7 @@ $(document).ready(function () {
                         
                     })
                     .then(function(response) {
-                        // console.log(response);   // Will show you the status
+                        console.log(response.status);   // Will show you the status
                          if (!response.ok) {
                              checkflag=1;
                              if(response.status==404){
@@ -65,30 +65,17 @@ $(document).ready(function () {
                              throw new Error("HTTP status " + response.status);
                             
                             }
-                            else if(response.status==400){
-                                errcheck=4;
-                            document.getElementById("container").style.display="table"
-                            document.getElementById("loader").style.display="none"
-                             throw new Error("HTTP status " + response.status);
-                            
-                            }
                             
                             }return response.json();})
                             .then(
                             success => {
-                            // console.log(success)
+                            console.log(success)
                             // console.log(success.auth_token)
                             localStorage.setItem('token',success.auth_token);
                             // console.log(localStorage.getItem('token'))
                             if(success.admin_status == true){
-                                location.href="./Admin/admindashboard.html";
-
+                                location.href="./Admin/admindashboard.html"
                             }
-                            else if(success.admin_status == false){
-                                // location.href="./view/otpscreen.html"
-                                location.href="./view/userongoing.html"
-
-                            } 
                             }
                             ).catch(
                             error => {
@@ -106,7 +93,7 @@ $(document).ready(function () {
                             for (let elem of $("#form")) {
                                 elem.reset()
                 }}
-                            else if(errcheck==3){
+                            else if(errcheck==2){
                                 document.getElementById('message').innerHTML = 'Forbidden'
                                 document.getElementById('message').style.color = "red"
                                 
@@ -123,8 +110,3 @@ $(document).ready(function () {
             document.getElementById("container").style.display="none"
             document.getElementById("loader").style.display="table"
         }
-        
-            
-        
-
-        
