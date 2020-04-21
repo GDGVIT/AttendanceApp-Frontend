@@ -11,12 +11,12 @@
 <br><br>
 
 ## Functionalities
-- [ ] Progressive Web Application 
-- [ ] Real Time Attendence 
-- [ ] Multiple Simultaneous events supported 
-- [ ] Live status to admin 
-- [ ] Live broadcast to each event participants 
-- [ ] Proxy check measure by location check 
+- [X] Progressive Web Application 
+- [X] Real Time Attendence 
+- [X] Multiple Simultaneous events supported 
+- [X] Live status to admin 
+- [X] Live broadcast to each event participants 
+- [X] Proxy check measure by location check 
 <br>
 
 
