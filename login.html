@@ -4,12 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="theme-color" content="#2F54EB"/>
+    <link rel="apple-touch-icon" href="./Assets/applogo1.jpeg">
     <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
     <link rel="icon" href="./Assets/applogo1.jpeg" type="image/gif" sizes="16x16">
     <link rel="stylesheet" href="./CSS/login.css">
     <link rel="stylesheet" href="./CSS/loader.css">
-    <title>Admin|Login</title>
+    <title>AttendanceApp|Login</title>
     <link rel="manifest" href="./manifest.webmanifest">
+    <script src="https://www.google.com/recaptcha/api.js?render=6Lcbz9YUAAAAAEV4Ist-t9NbDVWG3esXmbGHSX4c"></script>
 </head>
 <body>
     <div class="container" id="container">
@@ -26,10 +29,9 @@
     <input class="f1" type="email" name="email" value="" placeholder="Email ID" required><br>
     <input class="f1" type="password" name="password" value="" placeholder="Password" required><br>
     <input class="login" type="submit" value="Login" onclick="loader();">
-
     </form>
     <div class="signup">
-    <a  href="./Admin/adminsignup.html">Sign Up</a>
+    <a  href="./view/signup.html">Sign Up</a>
     </div>
     </div>
     </div>
@@ -62,8 +64,11 @@
         </div>
       </div>
     <!-- container ends -->
+    
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js" sync></script>
-    <script src="./JS/admin.js"></script>
+    <script src="./JS/login.js"></script>
+    
+    <!-- recaptcha -->
     <script src="https://www.google.com/recaptcha/api.js?render=6Lcbz9YUAAAAAEV4Ist-t9NbDVWG3esXmbGHSX4c"></script>
     <script>
         grecaptcha.ready(function() {
@@ -73,64 +78,7 @@
             });
         });
         </script>
-    <!-- <script src="https://www.google.com/recaptcha/api.js?render=_reCAPTCHA_site_key"></script> -->
-    <!-- recaptcha -->
-<!-- <script>
-            grecaptcha.ready(function() {
-                grecaptcha.execute('_reCAPTCHA_site_key_', {action: 'homepage'}).then(function(token) {
-                fetch()
-                });
-            });
-</script> -->
-<!-- service worker here -->
-<!-- <script>
-    if ('serviceWorker' in navigator) {
-    window.addEventListener('load', function() {
-    navigator.serviceWorker.register('service-worker.js').then(function(registration) {
-    console.log('Registered!');
-    }, function(err) {
-    console.log('ServiceWorker registration failed: ', err);
-    }).catch(function(err) {
-    console.log(err);
-    });
-    });
-    } else {
-    console.log('service worker is not supported');
-    }
-    </script> -->
-<!-- push notifications -->
-<!-- <script>
-    navigator.serviceWorker.ready.then(function(registration) {
-  if (!registration.pushManager) {
-    alert('No push notifications support.');
-    return false;
-  }
-  
-  registration.pushManager.subscribe({
-  userVisibleOnly: true 
-  })
-  .then(function (subscription) {
-  console.log('Subscribed.');
-  })
-  .catch(function (error) {
-  console.log('Subscription error: ', error);
-  });
-})
-</script> -->
-<!-- install prompt -->
-<!-- <script>
-    window.addEventListener('beforeinstallprompt', e => {
-  console.log('beforeinstallprompt Event fired');
-  e.preventDefault();
-  
-  this.deferredPrompt = e;
-  return false;
-  });
-this.deferredPrompt.prompt();
-  this.deferredPrompt.userChoice.then(choice => {
-  console.log(choice);
-  });
-this.deferredPrompt = null;
-</script> -->
+        
+    
 </body>
 </html>
